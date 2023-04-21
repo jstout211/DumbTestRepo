@@ -16,3 +16,6 @@ You get the idea
 
 ## Ouside of code blocks, text autoraps
 Use `<br>` to designate a break
+
+
+# Some new edits
