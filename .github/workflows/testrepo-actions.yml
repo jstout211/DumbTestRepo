@@ -17,7 +17,7 @@ jobs:
             TEST1.txt
       - run: git submodule update --init --recursive
 
-      - if: ${{ steps.cache-fs.outputs.cache-hit != 'true' }}
+      - if: ${{ steps.cache-fsdownload.outputs.cache-hit != 'true' }}
         name: Download FS
         run: pip install gdown; mkdir ~/TESTDATA; gdown https://drive.google.com/file/d/18W9q3em4ruRisqsNnwhG4kXlZJDP-IVD/view?usp=sharing -O ~/TESTDATA/TEST1.txt --fuzzy
 
