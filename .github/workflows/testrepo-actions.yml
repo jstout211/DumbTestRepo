@@ -1,0 +1,11 @@
+name: testrepo-tests
+on: [push]
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - run: git submodule update --init --recursive
+      - run: pip install gdown 
+      - run: gdown https://drive.google.com/file/d/18W9q3em4ruRisqsNnwhG4kXlZJDP-IVD/view?usp=sharing
